@@ -24,10 +24,15 @@ h6{
 	font-weight: 700;
 }
 
-img{
+/* img{
 	max-width: 100%;
-}
+} */
 
+.banner-image img {
+    max-width: 80%;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
 a:hover{
 	text-decoration: none;
 	outline: 0;
