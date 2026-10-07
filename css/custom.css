@@ -666,166 +666,309 @@ header .navbar.sticky-header{
 /***************************************/
 /*****     Portfolio Section css    ****/
 /***************************************/
+```css
+/* ==============================
+   Portfolio Section
+================================= */
 
-.portfolio{
-	background: #151515;
-	padding: 100px 0;
+.portfolio {
+    background: #151515;
+    padding: 100px 0;
 }
 
-.portfolio-nav{
-	text-align: center;
-	margin-bottom: 50px;
-	
+/* Section Title */
+
+.portfolio .section-title {
+    text-align: center;
+    margin-bottom: 50px;
 }
 
-.portfolio-nav ul{
-	padding: 0;
-	margin: 0;
-	list-style: none;
-	
+.portfolio .section-title h2 {
+    color: #ffffff;
 }
 
-.portfolio-nav ul li{
-	display: inline-block;
-	
+.portfolio .section-title p {
+    color: #999999;
 }
 
-.portfolio-nav ul li a{
-	display: block;
-	background: #222;
-	color: #707070;
-	padding: 6px 20px;
-	border: 1px solid #333;
-	margin: 0 4px;
-	transition: all 0.4s;
-	text-overflow: initial;
+
+/* ==============================
+   Portfolio Navigation
+================================= */
+
+.portfolio-nav {
+    text-align: center;
+    margin-bottom: 50px;
 }
 
-.portfolio-nav ul li a.active-portfolio{
-	background: #fa5c5c;
-	color: #fff;
-	border-color: #ff5d56;
+.portfolio-nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
-.single-portfolio{
-	position: relative;
-	margin-bottom: 30px;
+.portfolio-nav ul li {
+    display: inline-block;
 }
 
-.single-portfolio-overlay{
-	position: absolute;
-	top: 10px;
-	left: 10px;
-	right: 10px;
-	bottom: 10px;
-	background: rgba(0,0,0,0);
-	padding: 20px;
-	transition: all 0.6s;
+.portfolio-nav ul li a {
+    display: block;
+    background: #222222;
+    color: #707070;
+    padding: 8px 20px;
+    border: 1px solid #333333;
+    margin: 0 4px 8px;
+    transition: all 0.4s ease;
+    text-decoration: none;
 }
 
-.single-portfolio-overlay h2{
-	color: #fff;
-	font-size: 22px;
-	font-weight: 500;
-	margin-top: 20px;
-	opacity: 0;
-	transition: all 0.8s;
+.portfolio-nav ul li a:hover {
+    background: #333333;
+    color: #ffffff;
 }
 
-.single-portfolio-overlay h3{
-	font-weight: 400;
-	font-size: 16px;
-	color: #ff5d56;
-	opacity: 0;
-	transition: all 0.8s;
+.portfolio-nav ul li a.active-portfolio {
+    background: #fa5c5c;
+    color: #ffffff;
+    border-color: #ff5d56;
 }
 
-.single-portfolio:hover .single-portfolio-overlay{
-	background: rgba(0,0,0,0.8);
+
+/* ==============================
+   Portfolio Item
+================================= */
+
+.single-portfolio {
+    position: relative;
+    margin-bottom: 30px;
+    overflow: hidden;
 }
 
-.single-portfolio:hover .single-portfolio-overlay h2{
-	opacity: 1;
-	margin-top: 0;
+.single-portfolio img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-.single-portfolio:hover .single-portfolio-overlay h3{
-	opacity: 1;
+.portfolio-image {
+    width: 100%;
+    display: block;
 }
 
-.mfp-content{
-	background: #222;
-	max-width: 668px;
-	padding: 20px;
-	border: 1px solid #333;
+
+/* ==============================
+   Portfolio Overlay
+================================= */
+
+.single-portfolio-overlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+
+    background: rgba(0, 0, 0, 0);
+
+    padding: 20px;
+
+    transition: all 0.6s ease;
 }
 
-.mfp-content .content .image{
-	width: 40%;
-	float: left;
+.single-portfolio-overlay h2 {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 500;
+
+    margin-top: 20px;
+
+    opacity: 0;
+
+    transition: all 0.8s ease;
 }
 
-.mfp-content .content .desc{
-	width: 56%;
-	float: right;
+.single-portfolio-overlay h3 {
+    font-weight: 400;
+    font-size: 16px;
+    color: #ff5d56;
+
+    opacity: 0;
+
+    transition: all 0.8s ease;
 }
 
-.mfp-content .content .desc h4{
-	font-size: 20px;
-	color: #fff;
-	font-weight: 400;
+
+/* Hover */
+
+.single-portfolio:hover .single-portfolio-overlay {
+    background: rgba(0, 0, 0, 0.8);
 }
 
-.mfp-content .content .desc h5{
-	font-size: 16px;
-	color: #ff5d56;
-	font-weight: 400;
-	margin-bottom: 20px;
+.single-portfolio:hover .single-portfolio-overlay h2 {
+    opacity: 1;
+    margin-top: 0;
 }
 
-.mfp-content .content .desc p{
-	line-height: 1.6em;
-	margin-bottom: 1.6em;
+.single-portfolio:hover .single-portfolio-overlay h3 {
+    opacity: 1;
 }
 
-.btn-view-project{
-	display: inline-block;
-	font-size: 16px;
-	background: #333;
-	border: 1px solid #444;
-	padding: 6px 20px;
-	color: #707070;
-	transition: all 0.3s;
+
+/* ==============================
+   Popup
+================================= */
+
+.mfp-content {
+    background: #222222;
+    max-width: 668px;
+    padding: 20px;
+    border: 1px solid #333333;
 }
 
-.btn-view-project:hover{
-	border-color: #ff5d56;
-	color: #ff5d56;
-	background: none;
+.mfp-content .content {
+    overflow: hidden;
 }
 
-.mfp-close-btn-in .mfp-close{
-	color: #707070;
+.mfp-content .content .image {
+    width: 40%;
+    float: left;
 }
 
-.load-more-portfolio{
-	text-align: center;
-	margin-top: 30px;
+.mfp-content .content .image img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-.load-more-portfolio a{
-	display: inline-block;
-	font-size: 18px;
-	background: #222;
-	color: #707070;
-	padding: 18px 40px;
-	border: 1px solid #333;
-	transition: all 0.3s;
+.mfp-content .content .desc {
+    width: 56%;
+    float: right;
 }
 
-.load-more-portfolio a:hover{
-	border-color: #ff5d56;
-	color: #ff5d56;
+.mfp-content .content .desc h4 {
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: 400;
+    margin-top: 0;
+}
+
+.mfp-content .content .desc h5 {
+    font-size: 16px;
+    color: #ff5d56;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.mfp-content .content .desc p {
+    color: #cccccc;
+    line-height: 1.6em;
+    margin-bottom: 1.6em;
+}
+
+
+/* ==============================
+   View Project Button
+================================= */
+
+.btn-view-project {
+    display: inline-block;
+
+    font-size: 16px;
+
+    background: #333333;
+    border: 1px solid #444444;
+
+    padding: 8px 20px;
+
+    color: #707070;
+
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+.btn-view-project:hover {
+    border-color: #ff5d56;
+    color: #ff5d56;
+    background: none;
+}
+
+
+/* Popup Close Button */
+
+.mfp-close-btn-in .mfp-close {
+    color: #707070;
+}
+
+
+/* ==============================
+   Load More
+================================= */
+
+.load-more-portfolio {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.load-more-portfolio a {
+    display: inline-block;
+
+    font-size: 18px;
+
+    background: #222222;
+    color: #707070;
+
+    padding: 18px 40px;
+
+    border: 1px solid #333333;
+
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+.load-more-portfolio a:hover {
+    border-color: #ff5d56;
+    color: #ff5d56;
+}
+
+
+/* ==============================
+   Mobile Responsive
+================================= */
+
+@media (max-width: 767px) {
+
+    .portfolio {
+        padding: 60px 0;
+    }
+
+    .portfolio-nav ul li {
+        margin-bottom: 5px;
+    }
+
+    .portfolio-nav ul li a {
+        padding: 7px 12px;
+        font-size: 14px;
+    }
+
+    .single-portfolio-overlay h2 {
+        font-size: 18px;
+    }
+
+    .single-portfolio-overlay h3 {
+        font-size: 14px;
+    }
+
+    .mfp-content .content .image {
+        width: 100%;
+        float: none;
+        margin-bottom: 20px;
+    }
+
+    .mfp-content .content .desc {
+        width: 100%;
+        float: none;
+    }
 }
 
 /***************************************/
